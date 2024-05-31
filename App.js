@@ -6,16 +6,39 @@ const App = () => {
     <View style={{flex : 1}}>
       <View style={{
       flex : 1,
-      alignItems : 'flex-end',
+      alignItems : 'center',
+      justifyContent : 'center',
+
+      }}>
+        <Text style= {{
+          fontSize : 50,
+          fontWeight: 'bold'
+    
+        }}>Bag Bird</Text>
+      </View>
+
+      
+      <View style={{
+      flex : 1,
+      alignItems : 'center',
+      justifyContent : 'center',
+      
+      }}>
+      <Image source={require('./TokoPedia.png')} /> 
+      </View>
+
+
+      <View style={{
+      flex : 1,
+      alignItems : 'center',
       justifyContent : 'center',
       flexDirection : 'row',
-      justifyContent : 'space-evenly',
-      marginBottom: 100
+      justifyContent : 'space-evenly'
 
       }}>
 
         <View style={{
-          backgroundColor : 'red',
+          backgroundColor : 'green',
           width : 120,
           height : 80,
           borderRadius : 20,
@@ -30,6 +53,7 @@ const App = () => {
           }}>Login
           </Text>
         </View>
+
 
         <View style={{
           backgroundColor : 'blue',
