@@ -6,8 +6,8 @@ import React from 'react'
   return(
     <View style={{
       backgroundColor : color,
-      width : 120,
-      height : 80,
+      width : 350,
+      height : 50,
       borderRadius : 20,
       justifyContent : 'center'
 
