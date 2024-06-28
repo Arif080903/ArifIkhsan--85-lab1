@@ -2,13 +2,13 @@ import { StyleSheet, Text, View, Image} from 'react-native'
 import React from 'react'
 
 
-  const ButtonCostum = ({color, text}) => {
+  const ButtonCostum = ({color, text, borderRadius}) => {
   return(
     <View style={{
       backgroundColor : color,
       width : 350,
       height : 50,
-      borderRadius : 20,
+      borderRadius : borderRadius,
       justifyContent : 'center'
 
     }}>
