@@ -1,31 +1,30 @@
-import { useFonts } from 'expo-font';
-import { View, Text} from 'react-native';
+import * as React from 'react';
+import { View, Text, Button} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LoginPage from './LoginPage'
 
-export default function App() {
-  const [dapatFont] = useFonts({
-    'MetroBlack': require('./assets/fonts/Metropolis-Black.otf'),
-    'MetroBold' :require('./assets/fonts/Metropolis-Bold.otf'),
-    'MetroLight' :require('./assets/fonts/Metropolis-Light.otf'),
-    'MetroMedium' :require('./assets/fonts/Metropolis-Medium.otf'),
-    'MetroSemiBold' :require('./assets/fonts/Metropolis-SemiBold.otf'),
-  });
-  
-  if (!dapatFont) {
-    return <Text> font tidak ditemukan...</Text>
-  }
 
+function HomeScreen({navigation}) {
   return (
-    <View style={{
-      flex:1,
-      justifyContent : "center",
-      alignItems : "center",
-    }}>
-    <Text style = {{fontFamily : 'Metroblack'}}>font metropolis black </Text>
-    <Text style = {{fontFamily : 'MetroBold'}}>font metropolis bold </Text>
-    <Text style = {{fontFamily : 'MetroLight'}}>font metropolis Light </Text>
-    <Text style = {{fontFamily : 'MetroMedium'}}>font metropolis Medium </Text>
-    <Text style = {{fontFamily : 'MetroSemiBold'}}>font metropolis SemiBold </Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      <Button title='ke halaman login' onPress={() => navigation.navigate('LoginPage')}/>
     </View>
-
-  )
+  );
 }
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="LoginPage" component={LoginPage} options={{headerShown: false}} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;

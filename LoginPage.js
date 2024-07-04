@@ -20,7 +20,7 @@ const App = () => {
         }}>
           9:41
         </Text>
-        <Text style={{
+        <Text style={{ 
           fontSize : 45,
           fontWeight : 'bold',
           marginLeft : 20
