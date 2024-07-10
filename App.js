@@ -3,7 +3,8 @@ import { View, Text, Button} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginPage from './LoginPage'
-
+import SignUp from './SignUp'
+import Forgot from './Forgot'
 
 function HomeScreen({navigation}) {
   return (
@@ -20,8 +21,9 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="SignUp" component={SignUp} options={{headerShown: false}} />
         <Stack.Screen name="LoginPage" component={LoginPage} options={{headerShown: false}} />
+        <Stack.Screen name="Forgot" component={Forgot} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

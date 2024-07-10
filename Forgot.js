@@ -1,10 +1,10 @@
-import {Text, View, Image,} from 'react-native'
+import {Text, View, Image, TouchableOpacity} from 'react-native'
 import React from 'react'
 import TextInputCostum from './Component/TextInput/TextInput'
 import ButtonCostum from './Component/Button/Button'
 
 
-const App = () => {
+const App = ({navigation}) => {
   return(
     <View style = {{flex : 1}}>
       <View style = {{
@@ -20,6 +20,7 @@ const App = () => {
         }}>
           9:41
         </Text>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
         <Text style={{
           fontSize : 45,
           fontWeight : 'bold',
@@ -27,6 +28,7 @@ const App = () => {
         }}>
           {'<'}
         </Text>
+        </TouchableOpacity>
         <Text style ={{
           fontSize : 30,
           fontWeight : 'bold',
@@ -56,8 +58,6 @@ const App = () => {
         <ButtonCostum text = "SEND" color= 'red' borderRadius= {30} />
 
       </View>
-
-     
 
     </View>
   )
