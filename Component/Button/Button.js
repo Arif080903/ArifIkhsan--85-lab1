@@ -6,10 +6,11 @@ import React from 'react'
   return(
     <View style={{
       backgroundColor : color,
-      width : 350,
+      width : 450,
       height : 50,
       borderRadius : borderRadius,
-      justifyContent : 'center'
+      justifyContent : 'center',
+      marginBottom : 10
 
     }}>
       <Text style={{
